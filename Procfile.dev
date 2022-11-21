@@ -1,0 +1,15 @@
+# Using rdbg to allow for breakpoints through vscode
+# --open runs the debugger in a server mode
+# -n don't stop at the beginning of the program
+# -c run a Ruby based command (e.g. bin/rails)
+# Set WEB_CONCURRENCY=0 to run in single worker mode
+web: WEB_CONCURRENCY=0 bundle exec rdbg --open -n -c -- bin/rails server -p 3000
+
+# Run `yarn build` to keep an eye on and recompile JS if any
+# changes are detected
+js: yarn build --watch
+
+# Run `yarn build:css` to keep an eye on and recompile CSS if
+# any changes are detected
+css: yarn build:css --watch
+css: bin/rails tailwindcss:watch

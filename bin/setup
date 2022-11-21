@@ -1,0 +1,46 @@
+#!/usr/bin/env ruby
+require "fileutils"
+
+# path to your application root.
+APP_ROOT = File.expand_path("..", __dir__)
+
+def log(message, recovery_message = nil)
+  puts "[ bin/setup ] #{message}"
+end
+
+def system!(*args)
+  log("== Executing #{args} ==")
+  if system(*args)
+    log("== #{args} succeeded ==")
+  else
+    abort("\n!= Command #{args} failed =!")
+  end
+end
+
+FileUtils.chdir APP_ROOT do
+  # This script is a way to set up or update your development environment automatically.
+  # This script is idempotent, so that you can run it at any time and get an expectable outcome.
+  # Add necessary setup steps to this file.
+
+  log "== Installing dependencies =="
+  system! "gem install bundler --conservative"
+  system("bundle check") || system!("bundle install")
+
+  log "== Verifying Node is Installed =="
+  system! "node -v"
+
+  log "== Verifying Docker is Installed =="
+  system! "docker compose version"
+
+  log "== Spinning up the Docker Database =="
+  system! "docker compose up -d"
+
+  log "== Preparing database =="
+  system! "bin/rails db:prepare"
+
+  log "== Removing old logs and tempfiles =="
+  system! "bin/rails log:clear tmp:clear"
+
+  log "== Restarting application server =="
+  system! "bin/rails restart"
+end
