@@ -1,7 +1,9 @@
 Rails.application.routes.draw do
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
-  resource :home, only: :show
+  resources :entities
+
+  resource :home, only: :show, controller: 'home'
 
   # Defines the root path route ("/")
   root "home#show"
