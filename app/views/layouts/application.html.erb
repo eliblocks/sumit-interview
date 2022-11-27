@@ -1,17 +1,20 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>SumitInterview</title>
+    <title>Sumit Interview</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
+
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-    <%= stylesheet_link_tag "tailwind", "inter-font", "data-turbo-track": "reload" %>
 
+    <%= stylesheet_link_tag "tailwind", "inter-font", "data-turbo-track": "reload" %>
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
   </head>
 
-  <body>
-    <main class="container mx-auto mt-28 px-5 flex">
+  <body class='flex flex-col h-full lg:max-w-5xl w-full lg:mx-auto bg-stone-100'>
+    <%= render "layouts/header" %>
+
+    <main class="container mx-auto px-5 mt-10 flex">
       <%= yield %>
     </main>
   </body>
