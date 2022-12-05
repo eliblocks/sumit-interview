@@ -1,24 +1,33 @@
-# README
+# SumIt Interview App
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Welcome! This is a simple Rails app with minimal changes from the standard `rails new` invocation.
 
-Things you may want to cover:
+## General Instructions
 
-* Ruby version
+    TODO: Fill me in
 
-* System dependencies
+## Development
 
-* Configuration
+The app uses Docker to stand up a Postgres database.
 
-* Database creation
+### Dependencies
 
-* Database initialization
+This app has the following dependencies
+* Docker (installed using their installer [here](https://docs.docker.com/get-docker/))
+* Ruby (preferably through a version manager such as [rbenv](https://github.com/rbenv/rbenv))
+* Node (preferably through a version manager such as [nodenv](https://github.com/nodenv/nodenv))
 
-* How to run the test suite
+### Setup
 
-* Services (job queues, cache servers, search engines, etc.)
+1. Clone this repo.
+2. Run the [bin/setup]() script.
+3. Run the [bin/dev]() to spin up the local server.
+4. Visit `localhost:3000`, you should land on the home page.
 
-* Deployment instructions
+### Tests
 
-* ...
+We use [RSpec](https://rspec.info/) for tests. To run them simply call
+
+```shell
+bundle exec rspec ./spec/path/to/file_spec.rb
+```
