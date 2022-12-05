@@ -22,12 +22,15 @@ FileUtils.chdir APP_ROOT do
   # This script is idempotent, so that you can run it at any time and get an expectable outcome.
   # Add necessary setup steps to this file.
 
-  log "== Installing dependencies =="
+  log "== Installing Ruby dependencies =="
   system! "gem install bundler --conservative"
   system("bundle check") || system!("bundle install")
 
   log "== Verifying Node is Installed =="
   system! "node -v"
+
+  log "== Installing Javascript dependencies =="
+  system! "yarn"
 
   log "== Verifying Docker is Installed =="
   system! "docker compose version"
