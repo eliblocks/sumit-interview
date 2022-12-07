@@ -76,6 +76,9 @@ group :development do
 
   # Speed up commands on slow machines / big apps [https://github.com/rails/spring]
   # gem "spring"
+
+  # Use FactoryBot for fixtures [https://github.com/thoughtbot/factory_bot]
+  gem "factory_bot_rails"
 end
 
 group :test do
@@ -83,7 +86,4 @@ group :test do
   gem "capybara"
   gem "selenium-webdriver"
   gem "webdrivers"
-
-    # Use FactoryBot for fixtures [https://github.com/thoughtbot/factory_bot]
-  gem "factory_bot_rails"
 end
