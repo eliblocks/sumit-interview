@@ -65,6 +65,9 @@ group :development, :test do
 
   # Use faker to generate fake values [https://github.com/faker-ruby/faker]
   gem "faker"
+
+  # Use FactoryBot for fixtures [https://github.com/thoughtbot/factory_bot]
+  gem "factory_bot_rails"
 end
 
 group :development do
@@ -76,9 +79,6 @@ group :development do
 
   # Speed up commands on slow machines / big apps [https://github.com/rails/spring]
   # gem "spring"
-
-  # Use FactoryBot for fixtures [https://github.com/thoughtbot/factory_bot]
-  gem "factory_bot_rails"
 end
 
 group :test do

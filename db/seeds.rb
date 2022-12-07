@@ -6,6 +6,9 @@
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
 
+FactoryBot.create(:entity, name: 'Parent Trust')
+FactoryBot.create(:entity, name: 'First LLC')
+
 liability_account = FactoryBot.create(:liability_account, name: 'Unearned Revenue')
 cash_account = FactoryBot.create(:asset_account, name: 'Cash')
 
