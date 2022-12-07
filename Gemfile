@@ -40,6 +40,10 @@ gem "jbuilder"
 # Use Redis adapter to run Action Cable in production
 gem "redis", "~> 4.0"
 
+# Use plutus to provide double entry accounting [https://github.com/mbulat/plutus]
+# NOTE: Author hasn't released a version recently, so pinning to the latest ref.
+gem "plutus", git: "https://github.com/mbulat/plutus", ref: "3f01e6d"
+
 # Use Kredis to get higher-level data types in Redis [https://github.com/rails/kredis]
 # gem "kredis"
 
