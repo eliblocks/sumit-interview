@@ -2,8 +2,14 @@
 
 Welcome! This is a simple Rails app with minimal changes from the standard `rails new` invocation.
 
-# Instructions
+Considerations for the work you submitted:
+- [ ] The requested features work
+- [ ] Application is bootable and usable
+- [ ] Unit, integration, feature, and or end-to-end testing considered
+- [ ] Code is of sufficient quality and tidiness
+- [ ] Includes documentation on how to utilize new features / updates
 
+# Instructions
 We recently added the [plutus](https://github.com/mbulat/plutus) Rails engine to handle some of our basic accounting needs. The engine also gives us access to a few basic views available under the `plutus/` route, take a second to poke around to get familiar with these views.
 
 To complete the integration, we have the following remaining tasks:
@@ -34,7 +40,7 @@ The user should be able to make updates to the account, with the following restr
 
 The show/read view should display basic information of the account. Just the type and name is fine.
 
-There should also be a simple list view of the accounts displaying the type and the name of the accounts.
+There should also be a simple list view of the accounts displaying the type and the name of the accounts. The list should be filterable by account type.
 
 ### Deleting an Account
 
@@ -47,11 +53,19 @@ The features are summarized here:
 - [ ] Users can create and account, specifying the type from the list, and a full name
   - [ ] Email is sent to admin account upon creation
 - [ ] Users can view a single account
+- [ ] Users can view a list of accounts
+  - [ ] The list can be filtered by account type
 - [ ] Users can update an account
   - [ ] Users cannot update the type
   - [ ] Users cannot update the name if any transaction exists
 - [ ] Users can delete an account, but only if there are no transactions
 - [ ] Add an 'Accounts' nav option to the header next to 'General Ledger'
+
+### Tips
+
+* Rails provides a ton of [generators](https://guides.rubyonrails.org/command_line.html#bin-rails-generate) to help scaffold out this work, be sure to use them!
+* Don't focus too much on the UI layout, we're more interested in how you tackle the mechanics of the different features.
+* Check out the documenation of the Plutus engine for information on how the models in the engine are configured.
 
 ## Extras
 
