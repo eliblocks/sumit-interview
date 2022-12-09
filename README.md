@@ -4,7 +4,9 @@ Welcome! This is a simple Rails app with minimal changes from the standard `rail
 
 # Instructions
 
-We recently added the [plutus](https://github.com/mbulat/plutus) gem to handle some of our basic accounting needs. To complete the integration, we have the following remaining tasks:
+We recently added the [plutus](https://github.com/mbulat/plutus) Rails engine to handle some of our basic accounting needs. The engine also gives us access to a few basic views available under the `plutus/` route, take a second to poke around to get familiar with these views.
+
+To complete the integration, we have the following remaining tasks:
 
 ## Account Management
 
