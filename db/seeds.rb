@@ -8,9 +8,11 @@
 
 FactoryBot.create(:entity, name: 'Parent Trust')
 FactoryBot.create(:entity, name: 'First LLC')
+FactoryBot.create(:entity, name: 'Second LLC')
 
 liability_account = FactoryBot.create(:liability_account, name: 'Unearned Revenue')
-cash_account = FactoryBot.create(:asset_account, name: 'Cash')
+FactoryBot.create(:asset_account, name: 'Cash')
+FactoryBot.create(:asset_account, name: 'Accounts Receivable')
 
 FactoryBot.create(
   :journal_entry,
@@ -26,6 +28,24 @@ FactoryBot.create(
     {
       account: liability_account,
       amount: 1000.00
+    }
+  ]
+)
+
+FactoryBot.create(
+  :journal_entry,
+  description: "My second journal entry",
+  date: 4.days.ago,
+  debits: [
+    {
+      account_name: 'Accounts Receivable',
+      amount: 300.00
+    }
+  ],
+  credits: [
+    {
+      account: liability_account,
+      amount: 300.00
     }
   ]
 )
