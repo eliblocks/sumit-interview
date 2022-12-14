@@ -51,7 +51,7 @@ Similar to updating an account, the account can only be deleted when there are n
 The features are summarized here:
 
 - [ ] Users can create and account, specifying the type from the list, and a full name
-  - [ ] Email is sent to admin account upon creation
+  - [ ] Email is sent to some email address once created
 - [ ] Users can view a single account
 - [ ] Users can view a list of accounts
   - [ ] The list can be filtered by account type
@@ -63,13 +63,13 @@ The features are summarized here:
 
 ### Tips
 
-* Rails provides a ton of [generators](https://guides.rubyonrails.org/command_line.html#bin-rails-generate) to help scaffold out this work, be sure to use them!
+* Rails provides a ton of [generators](https://guides.rubyonrails.org/command_line.html#bin-rails-generate) to help scaffold out this work, don't be afraid to use them!
 * Don't focus too much on the UI layout, we're more interested in how you tackle the mechanics of the different features.
 * Check out the documenation of the Plutus engine for information on how the models in the engine are configured.
 
 ## Extras
 
-If you still have time and want to take this to another level, write some notes, or continue to add changes with the following in mind: one of the interesting challenges that we will be running into is the fact that Accounts will be associated with different entities.
+If you still have time and want to take this to another level, write some notes, or continue to add changes with the following in mind: one of the interesting challenges that we will be running into is the fact that Accounts will be associated with different entities (an entity is a legal entity such as an LLC or a Trust - the model already exists on the app).
 
 How would you update your changes here to be able to associate a single entity to an account?
 
