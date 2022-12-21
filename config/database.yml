@@ -9,8 +9,6 @@ default: &default
   # Since we use docker for the database (through docker-compose.yml), we specify some additional parameters to
   # access the database
   host: <%= ENV.fetch("POSTGRES_HOST", '0.0.0.0') %>
-  username: postgres
-  password: password
 
 development:
   <<: *default

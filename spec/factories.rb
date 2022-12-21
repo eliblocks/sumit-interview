@@ -1,4 +1,9 @@
 FactoryBot.define do
+  factory :account do
+    name { "Cash" }
+    type { "Plutus::Asset" }
+  end
+
   factory :entity do
     name { Faker::Company.name }
   end
