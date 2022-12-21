@@ -9,6 +9,22 @@ Considerations for the work you submitted:
 - [ ] Code is of sufficient quality and tidiness
 - [ ] Includes documentation on how to utilize new features / updates
 
+## Table of Contents
+- [Instructions](#instructions)
+  - [Account Management](#account-management)
+    - [Creating an Account](#creating-an-account)
+    - [Updating an Acccount](#updating-an-account)
+    - [Reading an Account](#reading-an-account)
+    - [Deleting an Account](#deleting-an-account)
+  - [Checklist](#checklist)
+  - [Tips](#tips)
+  - [Extras](#extras)
+- [Development](#development)
+  - [Dependencies](#dependencies)
+  - [Setup](#setup)
+  - [Tests](#tests)
+    
+
 # Instructions
 We recently added the [plutus](https://github.com/mbulat/plutus) Rails engine to handle some of our basic accounting needs. The engine also gives us access to a few basic views available under the `plutus/` route, take a second to poke around to get familiar with these views.
 
@@ -46,7 +62,7 @@ There should also be a simple list view of the accounts displaying the type and 
 
 Similar to updating an account, the account can only be deleted when there are no transactions under the account.
 
-### Checklist
+## Checklist
 
 The features are summarized here:
 
@@ -61,7 +77,7 @@ The features are summarized here:
 - [ ] Users can delete an account, but only if there are no transactions
 - [ ] Add an 'Accounts' nav option to the header next to 'General Ledger'
 
-### Tips
+## Tips
 
 * Rails provides a ton of [generators](https://guides.rubyonrails.org/command_line.html#bin-rails-generate) to help scaffold out this work, don't be afraid to use them!
 * Don't focus too much on the UI layout, we're more interested in how you tackle the mechanics of the different features.
